@@ -1,0 +1,2 @@
+#!/bin/bash 
+playerctl metadata , musikcube , firefox --format "{{ artist }} - {{ title }}" loop off shuffle off open off
