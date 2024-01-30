@@ -1,0 +1,185 @@
+#!/usr/bin/env bash
+
+DIR="/home/cleod/.config"
+# Commands
+rofi_cmd="rofi -theme /usr/share/rofi/themes/squared-gruvbox-walls.rasi"
+
+# Buttons
+wall0="Randomized"
+wall1="Leaves"
+wall2="Tux"
+wall3="Arch"
+wall4="Beach"
+wall5="Fog"
+wall6="Rose"
+wall7="Raindrops"
+wall8="CircledWave"
+wall9="Bash"
+wall10="Kanji"
+wall11="Staircase"
+wall12="Space"
+wall13="Statue"
+wall14="Blank"
+wall15="Solar System"
+wall16="Dot Grid"
+wall17="Pixel Cave"
+wall18="Cat"
+wall19="Beachrocks"
+wall20="Beachcoast"
+
+# take shots
+wall0 () {
+  feh --no-fehbg --bg-fill --randomize /usr/share/backgrounds/gruvbox/minimalistic
+}
+wall1 () {
+   feh --bg-fill /usr/share/backgrounds/gruvbox/irl/leaves-wall.png
+}
+
+wall2 () {
+   feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/sve.png
+}
+
+wall3 () {
+   feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/wp11058332.png
+}
+
+wall4 () {
+	 feh --bg-fill /usr/share/backgrounds/gruvbox/irl/beach.jpg
+
+}
+
+wall5 () {
+	 feh --bg-fill /usr/share/backgrounds/gruvbox/irl/forest-foggy-misty-cloudy.png
+}
+
+wall6 () {
+	 feh --bg-fill /usr/share/backgrounds/gruvbox/irl/rose01.jpg
+}
+
+wall7 () {
+	 feh --bg-fill /usr/share/backgrounds/gruvbox/irl/rain.jpg
+}
+
+wall8 () {
+	 feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/great-wave-of-kanagawa-gruvbox.png
+}
+
+wall9 () {
+   feh --bg-fill /usr/share/backgrounds/everforest/bash.png
+}
+
+wall10 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/ALLqk82.png
+}
+
+wall11 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/irl/staircase.jpg
+}
+
+wall12 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/gruvbox_spac.jpg
+}
+
+wall13 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/mix/qcqKfdZ.png
+}
+
+wall14 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/blank.png
+}
+
+wall15 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/gruvb_solarsys.png
+}
+
+wall16 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/minimalistic/gruvbox_grid.png
+}
+
+wall17 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/pixelart/gruvbox_image46.png
+}
+
+wall18 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/light/cat-coffee.png
+}
+
+wall19 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/irl/beachdual3.jpg
+}
+
+wall20 () {
+  feh --bg-fill /usr/share/backgrounds/gruvbox/irl/beachdual1.jpg
+}
+# Variable passed to rofi
+options="$wall0\n$wall1\n$wall2\n$wall3\n$wall4\n$wall5\n$wall6\n$wall7\n$wall8\n$wall9\n$wall10\n$wall11\n$wall12\n$wall13\n$wall14\n$wall15\n$wall16\n$wall17\n$wall18\n$wall19\n$wall20"
+
+chosen="$(echo -e "$options" | $rofi_cmd -p '❥ Dwm Wallpapers' -mesg "A list of all the wallpapers for this rice." -dmenu -selected-row 0 -lines 10 -eh 1 -width 100 -padding 400 -opacity -bw 0 -fullscreen true "85")"
+
+case $chosen in
+    $wall0)
+    wall0
+        ;;
+    $wall1)
+		wall1
+        ;;
+    $wall2)
+		wall2
+        ;;
+    $wall3)
+		wall3
+		    ;;
+    $wall4)
+		wall4
+        ;;
+    $wall5)
+    wall5
+        ;;
+    $wall6)
+    wall6
+        ;;
+    $wall7)
+    wall7
+        ;;
+    $wall8)
+    wall8
+        ;;
+    $wall9)
+    wall9
+        ;;
+    $wall10)
+    wall10
+        ;;
+    $wall11)
+    wall11
+        ;;
+    $wall12)
+    wall12
+        ;;
+    $wall13)
+    wall13
+        ;;
+    $wall14)
+    wall14
+        ;;
+    $wall15)
+    wall15
+        ;;
+    $wall16)
+    wall16
+        ;;
+    $wall17)
+    wall17
+        ;;
+    $wall18)
+    wall18
+        ;;
+    $wall19)
+    wall19
+        ;;
+    $wall20)
+    wall20
+        ;;
+esac
+
+@theme "/usr/share/rofi/themes/squared-everforest.rasi"
